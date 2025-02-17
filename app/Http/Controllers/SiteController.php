@@ -7,33 +7,43 @@ use App\Models\Blog;
 
 class SiteController extends Controller
 {
-    protected $template = 'templates.vertex-one.'; // Caminho para o template
+    protected $template;
+
+    public function __construct()
+    {
+        // Define o template uma única vez
+        $this->template = 'vertex-one';
+
+        // Compartilha a variável $template com todas as views
+        view()->share('template', $this->template);
+    }
+
 
     public function home()
     {
-        return view($this->template.'home');
+        return view('templates.'.$this->template.'.home');
     }
 
     public function services()
     {
-        return view($this->template.'services');
+        return view('templates.'.$this->template.'.services');
     }
 
     public function portfolio()
     {
-        return view($this->template.'portfolio');
+        return view('templates.'.$this->template.'.portfolio');
     }
 
     public function blog()
     {
         //$posts = Blog::latest()->paginate(10);
         $posts = [];        
-        return view($this->template.'blog', compact('posts'));
+        return view('templates.'.$this->template.'.blog', compact('posts'));
     }
 
     public function contact()
     {
-        return view($this->template.'contact');
+        return view('templates.'.$this->template.'.contact');
     }
 
     public function sendContactForm(Request $request)

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+    background-image: url('./assets/templates/vertex-one/background.png'); /* Note o './' */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #204d91ff;
+}
