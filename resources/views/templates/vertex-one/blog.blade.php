@@ -1,4 +1,4 @@
-@extends('templates.vertex-one.index')
+@extends('layouts.vertex-one')
 
 @section('content')
     <div class="blog">
@@ -11,6 +11,6 @@
             </div>
         @endforeach
         <!-- Paginação -->
-        {{ $posts->links() }}
+        { { $posts->links() }}
     </div>
 @endsection

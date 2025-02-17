@@ -1,4 +1,4 @@
-@extends('templates.vertex-one.index')
+@extends('layouts.vertex-one')
 
 @section('content')
     <div class="contact">
