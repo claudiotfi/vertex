@@ -8,7 +8,7 @@
         @vite('resources/css/vertex-one.css')
     </head>
 
-    <body class="bg-image"
+    <body class="bg-image flex flex-col min-h-screen"
         style="background-image: url('{{ asset('assets/templates/' . $template . '/background.png') }}');>
     </body>
   <!-- Header -->
@@ -66,82 +66,14 @@
         </nav>
         </header>
 
-
-        <!-- Destaque Principal -->
-        <section class="w-full bg-black/50">
-            <div class="container mx-auto px-4 py-16 text-white bg-no-repeat bg-cover bg-center flex items-end"
-                style="background-image: url('{{ asset('assets/templates/' . $template . '/programacao-softwares-slide.png') }}');">
-                <div class="flex flex-wrap items-end w-full pt-48">
-                    <div class="w-full md:w-1/2 p-8">
-                        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-                            Transformando ideias em soluções digitais inovadoras
-                        </h1>
-                    </div>
-                    <div class="w-full md:w-1/2 p-8">
-                        <p class="text-lg md:text-xl mb-8">
-                            Na Vertex, desenvolvemos sistemas personalizados
-                            que atendem às suas necessidades específicas.
-                            Nossa equipe de especialistas está pronta para levar
-                            seu projeto ao próximo nível.
-                        </p>
-                        <a href="{{ route('services') }}"
-                            class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full transition">Conheça
-                            nossos
-                            serviços</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Destaques -->
-        <section class="container mx-auto px-4 py-16 grid gap-8 md:grid-cols-3">
-            <div class="bg-white bg-opacity-90 p-6 rounded shadow hover:shadow-lg transition">
-                <h2 class="text-2xl font-bold mb-2">Destaque 1</h2>
-                <p class="text-gray-700">Descrição do destaque 1. Informações relevantes para engajar o usuário.</p>
-            </div>
-            <div class="bg-white bg-opacity-90 p-6 rounded shadow hover:shadow-lg transition">
-                <h2 class="text-2xl font-bold mb-2">Destaque 2</h2>
-                <p class="text-gray-700">Descrição do destaque 2. Informações relevantes para engajar o usuário.</p>
-            </div>
-            <div class="bg-white bg-opacity-90 p-6 rounded shadow hover:shadow-lg transition">
-                <h2 class="text-2xl font-bold mb-2">Destaque 3</h2>
-                <p class="text-gray-700">Descrição do destaque 3. Informações relevantes para engajar o usuário.</p>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contact" class="container mx-auto px-4 py-16 bg-gray-100">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
-                <p class="text-gray-600 mb-8">Tem alguma dúvida ou deseja iniciar um projeto? Estamos aqui para ajudar!
-                </p>
-                <!-- Exemplo de formulário simples -->
-                <form action="{{ route('contact.send') }}" method="POST" class="space-y-4">
-                    @csrf
-                    <div>
-                        <input type="text" name="name" placeholder="Seu nome"
-                            class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <input type="email" name="email" placeholder="Seu e-mail"
-                            class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <textarea name="message" placeholder="Sua mensagem" rows="4"
-                            class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full transition">Enviar
-                        Mensagem</button>
-                </form>
-            </div>
-        </section>
+        <main class="flex-grow w-full">
+            @yield('content')
+        </main>
 
         <!-- Footer -->
-        <footer class="container mx-auto px-6 py-6 flex justify-between items-center bg-blue-950 text-gray-200">
-            <div class="container mx-auto px-4 text-center">
-                <p>&copy; {{ date('Y') }} Vertex. Todos os direitos reservados.</p>
+        <footer class="w-full bg-blue-950">
+            <div class="container mx-auto p-8 text-gray-200">
+                <p class="text-center">&copy; {{ date('Y') }} Vertex. Todos os direitos reservados.</p>
             </div>
         </footer>
     </body>
