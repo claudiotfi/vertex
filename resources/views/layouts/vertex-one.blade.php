@@ -68,13 +68,31 @@
 
 
         <!-- Destaque Principal -->
-        <section class="container mx-auto px-4 py-16 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Bem-vindo à Vertex</h1>
-            <p class="text-lg md:text-xl mb-8">Transformando ideias em soluções digitais incríveis</p>
-            <a href="{{ route('services') }}"
-                class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full transition">Conheça nossos
-                serviços</a>
+        <section class="w-full bg-black/50">
+            <div class="container mx-auto px-4 py-16 text-white bg-no-repeat bg-cover bg-center flex items-end"
+                style="background-image: url('{{ asset('assets/templates/' . $template . '/programacao-softwares-slide.png') }}');">
+                <div class="flex flex-wrap items-end w-full pt-48">
+                    <div class="w-full md:w-1/2 p-8">
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                            Transformando ideias em soluções digitais inovadoras
+                        </h1>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8">
+                        <p class="text-lg md:text-xl mb-8">
+                            Na Vertex, desenvolvemos sistemas personalizados
+                            que atendem às suas necessidades específicas.
+                            Nossa equipe de especialistas está pronta para levar
+                            seu projeto ao próximo nível.
+                        </p>
+                        <a href="{{ route('services') }}"
+                            class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full transition">Conheça
+                            nossos
+                            serviços</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Destaques -->
         <section class="container mx-auto px-4 py-16 grid gap-8 md:grid-cols-3">
