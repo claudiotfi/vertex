@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('title', 'Vertex Desenvolvimento de Softwares')</title>
-        @vite('resources/css/vertex-one.css')
+        @vite('resources/css/public/vertex-one.css')
     </head>
 
     <body class="bg-image flex flex-col min-h-screen"
@@ -22,7 +22,6 @@
                         alt="Vertex Desenvolvimento de Softwares" title="Página Inicial" class="max-w-full h-auto">
                 </a>
             </div>
-
             <ul class="col-span-10 flex items-center px-2 bg-white/60 h-full rounded-md">
                 <li
                     class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
@@ -31,7 +30,6 @@
                         <span class="text-xs text-gray-600">Página Inicial</span>
                     </a>
                 </li>
-
                 <li
                     class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
                     <a href="{{ route('services') }}" class="flex flex-col pb-1">
@@ -61,15 +59,11 @@
                     </a>
                 </li>
             </ul>
-
-
         </nav>
         </header>
-
         <main class="flex-grow w-full">
             @yield('content')
         </main>
-
         <!-- Footer -->
         <footer class="w-full bg-blue-950">
             <div class="container mx-auto p-8 text-gray-200">
