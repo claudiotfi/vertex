@@ -1,9 +1,9 @@
-import '../bootstrap';
+import './bootstrap';
 
 import axios from 'axios';
 import { createApp } from 'vue';
-import router from './router';
-import App from './app.vue';
+import router from '../admin/router';
+import App from '../admin/App.vue';
 
 // Configura a URL base para as requisições
 axios.defaults.baseURL = '/api';
