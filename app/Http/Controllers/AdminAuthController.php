@@ -10,6 +10,17 @@ use Illuminate\Validation\ValidationException;
 
 class AdminAuthController extends Controller
 {
+    public function checkAuth()
+    {
+        return response()->json([
+            'authenticated' => Auth::check(),
+            'user' => Auth::user() ? [
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ] : null
+        ]);
+    }
+
     public function login(Request $request)
     {
         try {
