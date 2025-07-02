@@ -8,68 +8,42 @@
         @vite('resources/css/public/vertex-one.css')
     </head>
 
-    <body class="bg-image flex flex-col min-h-screen"
-        style="background-image: url('{{ asset('assets/templates/' . $template . '/background.png') }}');>
-    </body>
-  <!-- Header -->
- <header class="flex
-        justify-center bg-white shadow">
-        <nav class="container mx-auto px-6 py-8 grid grid-cols-12 items-center">
-            <div class="col-span-2 flex items-center px-4">
+    <body class="flex flex-col min-h-screen bg-white">
+    
+        <header class="fixed top-0 left-0 h-[6rem] w-full bg-white z-50 px-4 md:px-20 lg:px-52 flex items center
+        justify-between border-b-2 border-b-vertexBlue border-solid">
+            <div class="py-2">
                 <!-- Logo dinâmico para cada template -->
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('assets/templates/' . $template . '/vertex-desenvolvimento-softwares.png') }}"
-                        alt="Vertex Desenvolvimento de Softwares" title="Página Inicial" class="max-w-full h-auto">
+                    <img src="{{ asset('assets/templates/vertex-one/vertex-logo-blue.png') }}" class="w-24 md:w-36 lg:w-48 h-auto">
                 </a>
             </div>
-            <ul class="col-span-10 flex items-center px-2 bg-white/60 h-full rounded-md">
-                <li
-                    class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
-                    <a href="{{ route('home') }}" class="flex flex-col pb-1">
-                        <span class="text-2xl text-blue-900">Home</span>
-                        <span class="text-xs text-gray-600">Página Inicial</span>
-                    </a>
-                </li>
-                <li
-                    class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
-                    <a href="{{ route('services') }}" class="flex flex-col pb-1">
-                        <span class="text-2xl text-blue-900">Serviços</span>
-                        <span class="text-xs text-gray-600">Desenvolvimento de Softwares</span>
-                    </a>
-                </li>
-                <li
-                    class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
-                    <a href="{{ route('portfolio') }}" class="flex flex-col pb-1">
-                        <span class="text-2xl text-blue-900">Portfólio</span>
-                        <span class="text-xs text-gray-600">Projetos Realizados</span>
-                    </a>
-                </li>
-                <li
-                    class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
-                    <a href="{{ route('blog') }}" class="flex flex-col pb-1">
-                        <span class="text-2xl text-blue-900">Blog</span>
-                        <span class="text-xs text-gray-600">Notícias e Artigos</span>
-                    </a>
-                </li>
-                <li
-                    class="basis-1/5 px-2 mx-2 hover:bg-white/10 rounded-xl hover:shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]">
-                    <a href="{{ route('contact') }}" class="flex flex-col pb-1">
-                        <span class="text-2xl text-blue-900">Contato</span>
-                        <span class="text-xs text-gray-600">Fale Conosco</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            <nav class="py-4 grid grid-cols-3 gap-12 items-center">
+                <div class="flex justify-center text-lg md:text-2xl px-2 md:px-6 py-1 md:py-2 text-gray-600 border-grow
+                cursor-pointer font-semibold">
+                    <a href="#about-us">Sobre nós</a>
+                </div>
+                <div class="flex justify-center text-lg md:text-2xl px-2 md:px-6 py-1 md:py-2 text-gray-600 border-grow
+                cursor-pointer font-semibold">
+                    <a href="#services">Nossos serviços</a>
+                </div>
+                <div class="flex justify-center text-lg md:text-2xl px-2 md:px-6 py-1 md:py-2 text-gray-600 border-grow
+                cursor-pointer font-semibold">
+                    <a href="#contact">Fale com a gente</a>
+                </div>
+            </nav>
         </header>
-        <main class="flex-grow w-full">
+
+        <main class="flex-grow w-full h-full px-52 py-[6rem]">
             @yield('content')
         </main>
-        <!-- Footer -->
-        <footer class="w-full bg-blue-950">
+        
+        <footer class="w-full bg-vertexBlue">
             <div class="container mx-auto p-8 text-gray-200">
                 <p class="text-center">&copy; {{ date('Y') }} Vertex. Todos os direitos reservados.</p>
+                <p class="text-center">Icons by SVGBackgrounds.com</p>
             </div>
         </footer>
-    </body>
 
+    </body>
 </html>
