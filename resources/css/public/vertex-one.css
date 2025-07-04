@@ -4,12 +4,14 @@
 @tailwind utilities;
 
 :root {
-    --vertexBlue: #154a99;
+    --vertexBlue: hsl(216, 76%, 34%);
     --vertexDarkBlue: #0e2f61;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 p, a {
@@ -38,8 +40,6 @@ p, a {
     left: 0;
 }
 
-/* resources/css/public/vertex-one.css */
-
 .paragraph-light {
     @apply text-2xl font-light mb-8;
 }
@@ -47,4 +47,7 @@ p, a {
 .paragraph-bold {
     @apply text-2xl font-bold mb-8;
 }
-  
+
+/* .h-screen-minus-header {
+    height: calc(90vh - 6rem);
+}   */
