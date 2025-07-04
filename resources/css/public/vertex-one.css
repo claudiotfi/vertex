@@ -1,12 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.bg-image {
-    background-image: url('./assets/templates/vertex-one/background.png'); /* Note o './' */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #204d91ff;
+:root {
+    --vertexBlue: hsl(216, 76%, 34%);
+    --vertexDarkBlue: #0e2f61;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p, a {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.border-grow {
+    position: relative;
+    border: none;
+}
+
+.border-grow::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--vertexBlue);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.border-grow:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.paragraph-light {
+    @apply text-2xl font-light mb-8;
+}
+
+.paragraph-bold {
+    @apply text-2xl font-bold mb-8;
+}
+
+/* .h-screen-minus-header {
+    height: calc(90vh - 6rem);
+}   */
