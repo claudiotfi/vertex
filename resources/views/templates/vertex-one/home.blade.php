@@ -75,7 +75,7 @@
     <section class="w-full flex flex-col pt-20 scroll-mt-12" id="services">
         <x-title size="sm-latin" main="Nossos" emphasis="serviços" :template="$template"></x-title>
         <div class="w-full h-full flex px-4 md:px-20 lg:px-52 grid grid-cols-4">
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('development') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Desenvolvimento de Sistemas">
                 Para atender a automação necessária para seu negócio.
@@ -84,12 +84,12 @@
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}" title="Criação de Sites">
                 Quer fazer o seu site mas não sabe por onde começar? A Vertex está aqui pra te ajudar.
             </x-card>
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('security') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Performance e Segurança">
                 Seu projeto seguro.
             </x-card>
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('content_migration') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Migração de Conteúdo">
                 Para quando você precisa transferir uma grande quantidade de dados entre bancos.

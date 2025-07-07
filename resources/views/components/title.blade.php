@@ -4,6 +4,7 @@
     $sizeMap = [
         'sm' => ['text' => 'text-5xl', 'translate' => 'translate-y-2'],
         'sm-latin' => ['text' => 'text-5xl', 'translate' => 'translate-y-6'],
+        'md' => ['text' => 'text-5xl', 'translate' => 'translate-y-10'],
         'lg' => ['text' => 'text-8xl', 'translate' => 'translate-y-20'],
     ];
 

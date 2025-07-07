@@ -24,9 +24,19 @@ class SiteController extends Controller
         return view('templates.'.$this->template.'.home');
     }
 
-    public function services()
+    public function security()
     {
-        return view('templates.'.$this->template.'.services');
+        return view('templates.'.$this->template.'.security');
+    }
+    
+    public function content_migration()
+    {
+        return view('templates.'.$this->template.'.content_migration');
+    }
+    
+    public function development()
+    {
+        return view('templates.'.$this->template.'.development');
     }
     
     public function sites()
