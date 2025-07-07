@@ -9,7 +9,7 @@
                     Na Vertex, desenvolvemos sistemas personalizados que atendem às suas necessidades específicas e levam
                     seu projeto ao próximo nível.
                 </p>
-                <a href="{{ route('services') }}"
+                <a href="{{ url('/') }}#services"
                     class="bg-vertexBlue hover:bg-vertexDarkBlue font-semibold text-xl text-white py-3 px-6 rounded-md transition">
                     Conheça nossos serviços
                 </a>
@@ -43,19 +43,6 @@
             </p>
             <div class="w-full grid grid-cols-2 gap-12">
                 <div>
-                    <p class="paragraph-bold text-vertexBlue font-bold">Eduardo Luz</p>
-                    <div class="grid grid-cols-[14rem_1fr] gap-4">
-                        <img src="{{ asset('assets/templates/' . $template . '/img/eu.png') }}"
-                            class="w-full rounded-full border-4 border-vertexBlue pointer-events-none select-none"
-                            alt="">
-                        <p class="paragraph-light">
-                            Com 4 anos de experiência em desenvolvimento, consegue aplicar no planejamento e na execução dos
-                            projetos mais de 12 anos de experiência com controle da qualidade e normas ISO, resultando em
-                            produtos confiáveis, alinhados aos mais altos requisitos do mercado e muito bem documentados.
-                        </p>
-                    </div>
-                </div>
-                <div>
                     <p class="paragraph-bold text-vertexBlue font-bold">Claudio Tosetto</p>
                     <div class="grid grid-cols-[14rem_1fr] gap-4">
                         <img src="{{ asset('assets/templates/' . $template . '/img/claudio.png') }}"
@@ -68,6 +55,19 @@
                         </p>
                     </div>
                 </div>
+                <div>
+                    <p class="paragraph-bold text-vertexBlue font-bold">Eduardo Luz</p>
+                    <div class="grid grid-cols-[14rem_1fr] gap-4">
+                        <img src="{{ asset('assets/templates/' . $template . '/img/eu.png') }}"
+                            class="w-full rounded-full border-4 border-vertexBlue pointer-events-none select-none"
+                            alt="">
+                        <p class="paragraph-light">
+                            A aplicação de 4 anos de experiência em desenvolvimento e mais de 12 anos de experiência com
+                            controle da qualidade e normas ISO, resultam em produtos confiáveis, muito bem documentados e
+                            alinhados aos mais altos requisitos do mercado.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -75,21 +75,21 @@
     <section class="w-full flex flex-col pt-20 scroll-mt-12" id="services">
         <x-title size="sm-latin" main="Nossos" emphasis="serviços" :template="$template"></x-title>
         <div class="w-full h-full flex px-4 md:px-20 lg:px-52 grid grid-cols-4">
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('development') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Desenvolvimento de Sistemas">
                 Para atender a automação necessária para seu negócio.
             </x-card>
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('sites') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}" title="Criação de Sites">
                 Quer fazer o seu site mas não sabe por onde começar? A Vertex está aqui pra te ajudar.
             </x-card>
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('security') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Performance e Segurança">
                 Seu projeto seguro.
             </x-card>
-            <x-card route="{{ route('services') }}"
+            <x-card route="{{ route('content_migration') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Migração de Conteúdo">
                 Para quando você precisa transferir uma grande quantidade de dados entre bancos.
