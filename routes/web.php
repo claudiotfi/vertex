@@ -6,6 +6,7 @@ use App\Http\Controllers\SiteController;
 // Rotas Públicas
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/services', [SiteController::class, 'services'])->name('services');
+Route::get('/sites', [SiteController::class, 'sites'])->name('sites');
 Route::get('/portfolio', [SiteController::class, 'portfolio'])->name('portfolio');
 Route::get('/blog', [SiteController::class, 'blog'])->name('blog');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');

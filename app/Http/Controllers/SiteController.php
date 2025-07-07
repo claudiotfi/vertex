@@ -28,6 +28,11 @@ class SiteController extends Controller
     {
         return view('templates.'.$this->template.'.services');
     }
+    
+    public function sites()
+    {
+        return view('templates.'.$this->template.'.sites');
+    }
 
     public function portfolio()
     {

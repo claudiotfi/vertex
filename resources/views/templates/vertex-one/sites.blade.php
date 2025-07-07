@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="w-full flex flex-col pt-20">
-        <x-title size="sm-latin" emphasis_first emphasis="Construção" main="de Sites"></x-title>
+        <x-title size="sm-latin" emphasis_first emphasis="Criação" main="de Sites"></x-title>
         <div class="py-8">
             <div class="grid gap-8 md:grid-cols-2 items-center px-4 md:px-20 lg:px-52">
                 <p class="paragraph-light">
