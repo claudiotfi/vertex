@@ -46,7 +46,10 @@
     <footer class="w-full bg-vertexBlue">
         <div class="container mx-auto p-8 text-gray-200">
             <p class="text-center">&copy; {{ date('Y') }} Vertex. Todos os direitos reservados.</p>
-            <p class="text-center">Icons by SVGBackgrounds.com</p>
+            <p class="text-center">
+                Imagens e ícones por <a href="http://www.freepik.com/">Freepik</a> e <a
+                    href="https://www.svgbackgrounds.com/">SVGBackgrounds</a>
+            </p>
         </div>
     </footer>
 

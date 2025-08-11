@@ -14,10 +14,10 @@
                     Conheça nossos serviços
                 </a>
             </div>
-            <div class="self-start h-[76%]">
-                <img src="{{ asset('assets/templates/' . $template . '/svg/icon_pc.svg') }}"
-                    class="w-full h-full object-contain object-top
-                    pointer-events-none select-none"
+            <div>
+                <img src="{{ asset('assets/templates/' . $template . '/img/lightbulb.jpg') }}"
+                    class="w-full max-w-xl mx-auto object-contain object-top
+                    pointer-events-none select-none -mt-20"
                     alt="">
             </div>
         </div>
@@ -74,25 +74,25 @@
 
     <section class="w-full flex flex-col pt-20 scroll-mt-12" id="services">
         <x-title size="sm-latin" main="Nossos" emphasis="serviços" :template="$template"></x-title>
-        <div class="w-full h-full flex px-4 md:px-20 lg:px-52 grid grid-cols-4">
+        <div class="w-full h-full flex px-4 md:px-20 lg:px-52 grid grid-cols-3">
             <x-card route="{{ route('development') }}"
-                img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
+                img_path="{{ asset('assets/templates/' . $template . '/img/dev.jpg') }}"
                 title="Desenvolvimento de Sistemas">
                 Para atender a automação necessária para seu negócio.
             </x-card>
-            <x-card route="{{ route('sites') }}"
-                img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}" title="Criação de Sites">
+            <x-card route="{{ route('sites') }}" img_path="{{ asset('assets/templates/' . $template . '/img/webdev.jpg') }}"
+                title="Criação de Sites">
                 Quer fazer o seu site mas não sabe por onde começar? A Vertex está aqui pra te ajudar.
             </x-card>
-            <x-card route="{{ route('security') }}"
+            {{-- <x-card route="{{ route('security') }}"
                 img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
                 title="Performance e Segurança">
                 Seu projeto seguro.
-            </x-card>
+            </x-card> --}}
             <x-card route="{{ route('content_migration') }}"
-                img_path="{{ asset('assets/templates/' . $template . '/img/webstrategy.jpg') }}"
+                img_path="{{ asset('assets/templates/' . $template . '/img/content_migration.png') }}"
                 title="Migração de Conteúdo">
-                Para quando você precisa transferir uma grande quantidade de dados entre bancos.
+                Para quando você precisar transferir seus dados para outro local ou para a nuvem.
             </x-card>
         </div>
     </section>
@@ -101,7 +101,7 @@
         <x-title emphasis_first emphasis="Fale" main="com a gente" :template="$template"></x-title>
         <p class="paragraph-light px-4 md:px-20 lg:px-52">Estamos ansiosos para ouvir sua ideia ou seu projeto, novo ou
             existente. Preencha o formulário abaixo e a gente entra em contato com você.</p>
-        <div
+        {{-- <div
             class="self-center w-[30%] h-[40%] p-8 paragraph-bold grid grid-cols-4 gap-4 items-center bg-vertexBlue border-2 border-vertexDarkBlue
                 rounded-3xl">
             <img class="col-span-1" src="{{ asset('assets/templates/' . $template . '/svg/phone.svg') }}">
@@ -111,7 +111,7 @@
                     6464756756
                 </div>
             </div>
-        </div>
+        </div> --}}
         <form action="{{ route('contact.send') }}" method="POST" class="space-y-4 px-4 md:px-20 lg:px-52">
             @csrf
             <div>
